@@ -32,25 +32,30 @@ To illustrate the power of an ORM, we will use Spring implementation of JPA : Sp
 
 ## Tools used
 
-First of all, here's a list of all the tools we will need to do this tutorial :
+First of all, here's a list of all the tools we will use in this tutorial :
 * An IDE : We will use Intellij IDEA here
 * Maven
 * Spring Data JPA
+* H2 database
 
 ## Setup
 
 We will first create a new maven project with Spring Data JPA and Spring boot.  
 To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)  
 
-![alt text][spring_init]
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/spring_init.png"/>
+</p>
 
-## Entities
+## Entity
 
 Once our project is set up, we're going to create our first entity.  
 To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.  
 Then, have a look at this class :
 
-IMAGE CLASS MOTO.Java
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/moto_class.png"/>
+</p>
 
 There is a lot of thing going on there! Let's have a look at them one by one:
 
@@ -63,9 +68,34 @@ We can also see that :
 * 2 constructors have been created (without and with all arguments)
 * The toString() method have been overridden (this will be used later)
 
+## Repository
+
+Next thing we need is a repository. We can see it as the Java representation of the database table, with all its data in it!  
+We will use this repository to insert, update and remove from the database table.  
+Let's take a look at the interface, it's pretty simple :  
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/repository.png"/>
+</p>
+
+First of all, well, it's an interface! Indeed, we don't need to create a class here. Thus, this interface needs to extends CrudRepository<T, ID>. In our case, our T is the Moto class, and its ID is simply a Long.  
+Next, we can see the annotation "@Repository" which tells Spring that this is our repository we will use for the Moto class.
+Finally, we can see 2 methods signatures. We don't have to implements them, Spring Data JPA will understand easily what we want to do here. But we have to give it a hint :
+* What does this query returns ? -> Here, a simple list
+* What do we want our Motos to have ? -> Here 2 cases : Either a brand, or a number of cylinders
+
+## Application
+
+If you take a look at your source root directory, you should see a file named 'JpaTutorialApplication.java'. It contains the main() method to launch your spring application.  
+We need to modify this class :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/application.png"/>
+</p>
+
+
+
 
 # Credits
 Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)  
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
-
-[spring_init]: https://github.com/rsauvair/JPA/blob/master/images/spring_init.png "Spring Initializr"
