@@ -1,11 +1,9 @@
-# JPA
-
-## ORM
-### What's an ORM ?
+# ORM
+## What's an ORM ?
 An ORM (Object/Relational Mapping) is a technique that allows you to query and manipulate data from any database using an object-oriented language.
 It greatest feature is that it allows you to handle your database objects as if it was simple local objects. You don't need to write complex SQL queries anymore!
 
-### Object-Relational Impedance Mismatch
+## Object-Relational Impedance Mismatch
 Unfortunately, sometimes, it can happen that there is a mismatch between your relational object (in the database) and your object model (written in your favorite language).
 
 It can happens for multiple reasons :
@@ -15,9 +13,9 @@ It can happens for multiple reasons :
 * Association : In relation model, association are handled via foreign key. Meanwhile, in object oriented languages, associations are unidirectionnal reference
 * Navigation : In object oriented languages, we use associations to navigate through the object network, while in relational model, data can be navigated through via queries joining tables
 
-## JPA
+# JPA
 
-### Introduction
+## Introduction
 
 JPA stands for : "Java Persistence API".
 
@@ -25,15 +23,15 @@ JPA is considered to be the standard industry approach for object to relational 
 
 JPA is, just as J2E, just a specification. It's just a set of interfaces which requires an implementation.
 
-### Persistence ?
+## Persistence ?
 
 For an object to be 'persistent', it has to lives on after the application is shut down. In other words, it means the object is saved in the database just before the application is shut down!
 
-## Spring Data JPA
+# Spring Data JPA
 
 To illustrate the power of an ORM, we will use Spring implementation of JPA : Spring Data JPA.
 
-### Setup
+## Setup
 
 
 
