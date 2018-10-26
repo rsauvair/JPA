@@ -75,12 +75,13 @@ We will use this repository to insert, update and remove from the database table
 Let's take a look at the interface, it's pretty simple :  
 
 <p align="center">
-  <img src="https://github.com/rsauvair/JPA/blob/master/images/repository.png"/>
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/moto_repository.png"/>
 </p>
 
 First of all, well, it's an interface! Indeed, we don't need to create a class here. Thus, this interface needs to extends CrudRepository<T, ID>. In our case, our T is the Moto class, and its ID is simply a Long.  
 Next, we can see the annotation "@Repository" which tells Spring that this is our repository we will use for the Moto class.
-Finally, we can see 2 methods signatures. We don't have to implements them, Spring Data JPA will understand easily what we want to do here. But we have to give it a hint :
+Finally, we can see 2 methods signatures. We don't have to implements them, Spring Data JPA will understand easily what we want to do here.  
+But we have to give it a hint :
 * What does this query returns ? -> Here, a simple list
 * What do we want our Motos to have ? -> Here 2 cases : Either a brand, or a number of cylinders
 
@@ -93,6 +94,16 @@ We need to modify this class :
   <img src="https://github.com/rsauvair/JPA/blob/master/images/application.png"/>
 </p>
 
+A lot of things are going on here! Let's explain them:
+* @SpringBootApplication : To simplify things, we use Spring Boot here.
+* @Autowired : Mark the attribute repository to be injected by Spring dependency injection facilities, which means this attribute will be injected just after the construction of the bean. We want this because we need the repository to be available as soon as possible.
+* logger : Spring uses a beautifully designed console logger, might as well use it, right ?
+* CommandLineRunner : As you can see, our class implements the functional interface CommandLineRunner. We use it here to be able to launch some code right after our spring application is started, before it shuts down.
+
+## Using MotoRepository
+
+Now that everything is set up, we can finally use our newly created repository!  
+Well, you must've guessed, we will code inside the run() function in our JpaTutorialApplication class.  
 
 
 
