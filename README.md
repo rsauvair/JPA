@@ -19,8 +19,9 @@ It can happens for multiple reasons :
 
 ### Introduction
 
-JPA stands for : "Java Persistence API"
-JPA is considered to be the standard industry approach for object to relational mapping (ORM)
+JPA stands for : "Java Persistence API".
+
+JPA is considered to be the standard industry approach for object to relational mapping (ORM).
 
 ### Persistence ?
 
