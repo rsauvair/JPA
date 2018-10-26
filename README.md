@@ -35,7 +35,6 @@ To illustrate the power of an ORM, we will use Spring implementation of JPA : Sp
 First of all, here's a list of all the tools we will need to do this tutorial :
 * An IDE : We will use Intellij IDEA here
 * Maven
-* Spring Boot (to ease the setup of the project)
 * Spring Data JPA
 
 ## Setup
@@ -59,7 +58,10 @@ There is a lot of thing going on there! Let's have a look at them one by one:
 * @Id : Tells JPA that this attribute will be used as primary key in the Moto table.
 * @GeneratedValue : Indicate that the id should be generated automatically
 
-The other object's properties (brand, model, ...) are not annotated because we want them to be mapped to columns that share the same name.
+The other object's properties (brand, model, ...) are not annotated because we want them to be mapped to columns that share the same name.  
+We can also see that :
+* 2 constructors have been created (without and with all arguments)
+* The toString() method have been overridden (this will be used later)
 
 
 # Credits
