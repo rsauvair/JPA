@@ -51,7 +51,9 @@ Once our project is set up, we're going to create our first entity.
 To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.  
 Then, have a look at this class :
 
-<center>![class_moto]</center>
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/moto_class.png"/>
+</p>
 
 There is a lot of thing going on there! Let's have a look at them one by one:
 
@@ -70,4 +72,4 @@ Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
 [spring_init]: https://github.com/rsauvair/JPA/blob/master/images/spring_init.png "Spring Initializr"
-[class_moto]: https://github.com/rsauvair/JPA/blob/master/images/moto_class.png "Moto entity"
+[class_moto]: "Moto entity"
