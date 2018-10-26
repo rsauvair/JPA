@@ -32,10 +32,11 @@ To illustrate the power of an ORM, we will use Spring implementation of JPA : Sp
 
 ## Tools used
 
-First of all, here's a list of all the tools we will need to do this tutorial :
+First of all, here's a list of all the tools we will use in this tutorial :
 * An IDE : We will use Intellij IDEA here
 * Maven
 * Spring Data JPA
+* H2 database
 
 ## Setup
 
@@ -50,7 +51,7 @@ Once our project is set up, we're going to create our first entity.
 To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.  
 Then, have a look at this class :
 
-IMAGE CLASS MOTO.Java
+![class_moto]
 
 There is a lot of thing going on there! Let's have a look at them one by one:
 
@@ -69,3 +70,4 @@ Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
 [spring_init]: https://github.com/rsauvair/JPA/blob/master/images/spring_init.png "Spring Initializr"
+[class_moto]: https://github.com/rsauvair/JPA/blob/master/images/moto_class.png "Moto entity"
