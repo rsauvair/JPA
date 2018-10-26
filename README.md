@@ -1,6 +1,6 @@
 # ORM
 ## What's an ORM ?
-An ORM (Object/Relational Mapping) is a technique that allows you to query and manipulate data from any database using an object-oriented language.
+An ORM (Object/Relational Mapping) is a technique that allows you to query and manipulate data from any database using an object-oriented language.  
 It greatest feature is that it allows you to handle your database objects as if it was simple local objects. You don't need to write complex SQL queries anymore!
 
 ## Object-Relational Impedance Mismatch
@@ -41,17 +41,15 @@ First of all, here's a list of all the tools we will need to do this tutorial :
 
 ## Setup
 
-We will first create a new maven project with Spring Data JPA and Spring boot.
+We will first create a new maven project with Spring Data JPA and Spring boot.  
 To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)
 
 IMAGE SPRING INITIALIZR
 
 ## Entities
 
-Once our project is set up, we're going to create our first entity.
-
-To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.
-
+Once our project is set up, we're going to create our first entity.  
+To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.  
 Then, have a look at this class :
 
 IMAGE CLASS MOTO.Java
@@ -66,7 +64,6 @@ The other object's properties (brand, model, ...) are not annotated because we w
 
 
 # Credits
-Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)
-
+Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)  
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
