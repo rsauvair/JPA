@@ -15,10 +15,12 @@ It can happens for multiple reasons :
 * Association : In relation model, association are handled via foreign key. Meanwhile, in object oriented languages, associations are unidirectionnal reference
 * Navigation : In object oriented languages, we use associations to navigate through the object network, while in relational model, data can be navigated through via queries joining tables
 
-
-In this tutorial we are going to use J2E most known ORM : Spring Data JPA.
-
 ## JPA
 
 ### Introduction
+
+JPA stands for : "Java Persistence API"
+JPA is considered to be the standard industry approach for object to relational mapping (ORM)
+
+### Persistence ?
 
