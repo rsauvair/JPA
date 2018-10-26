@@ -1,5 +1,6 @@
 package fr.epita.jpatutorial;
 
+import fr.epita.jpatutorial.entities.Moto;
 import fr.epita.jpatutorial.repositories.MotoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,12 @@ public class JpaTutorialApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // TODO : do some stuff here
+        repository.save(new Moto("Yamaha", "Fazer", 600));
+        repository.save(new Moto("Yamaha", "R1", 1000));
+        repository.save(new Moto("Kawasaki", "Z750", 750));
+        repository.findByBrand("Yamaha").forEach(moto ->
+                logger.warn(moto.toString())
+        );
     }
 }
 
