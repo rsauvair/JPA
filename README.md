@@ -65,4 +65,7 @@ There is a lot of thing going on there! Let's have a look at them one by one:
 The other object's properties (brand, model, ...) are not annotated because we want them to be mapped to columns that share the same name.
 
 
+# Credits
+Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)
+Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
