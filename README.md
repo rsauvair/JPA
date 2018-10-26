@@ -75,7 +75,7 @@ We will use this repository to insert, update and remove from the database table
 Let's take a look at the interface, it's pretty simple :  
 
 <p align="center">
-  <img src="https://github.com/rsauvair/JPA/blob/master/images/repository.png"/>
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/moto_repository.png"/>
 </p>
 
 First of all, well, it's an interface! Indeed, we don't need to create a class here. Thus, this interface needs to extends CrudRepository<T, ID>. In our case, our T is the Moto class, and its ID is simply a Long.  
