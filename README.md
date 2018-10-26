@@ -67,5 +67,6 @@ The other object's properties (brand, model, ...) are not annotated because we w
 
 # Credits
 Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)
+
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
