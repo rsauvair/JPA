@@ -10,7 +10,7 @@ public class Moto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String brand;
     private String model;
