@@ -17,15 +17,14 @@ It can happens for multiple reasons :
 
 ## Introduction
 
-JPA stands for : "Java Persistence API".
-
-JPA is considered to be the standard industry approach for object to relational mapping (ORM).
-
+JPA stands for : "Java Persistence API".  
+JPA is considered to be the standard industry approach for object to relational mapping (ORM).  
 JPA is, just as J2E, just a specification. It's just a set of interfaces which requires an implementation.
 
 ## Persistence ?
 
-For an object to be 'persistent', it has to lives on after the application is shut down. In other words, it means the object is saved in the database just before the application is shut down!
+For an object to be 'persistent', it has to lives on after the application is shut down.  
+In other words, it means the object is saved in the database just before the application is shut down!
 
 # Spring Data JPA
 
