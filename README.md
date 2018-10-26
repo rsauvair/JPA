@@ -31,7 +31,17 @@ For an object to be 'persistent', it has to lives on after the application is sh
 
 To illustrate the power of an ORM, we will use Spring implementation of JPA : Spring Data JPA.
 
+## Tools used
+
+First of all, here's a list of all the tools we will need to do this tutorial :
+* An IDE : We will use Intellij IDEA here
+* Maven
+* Spring Boot (to ease the setup of the project)
+* Spring Data JPA
+
 ## Setup
 
+We will first create a new maven project with Spring Data JPA and Spring boot.
+To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)
 
-
+![
