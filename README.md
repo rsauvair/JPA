@@ -33,7 +33,7 @@ To illustrate the power of an ORM, we will use Spring implementation of JPA : Sp
 ## Tools used
 
 First of all, here's a list of all the tools we will use in this tutorial :
-* An IDE : We will use Intellij IDEA here
+* A Java IDE : We will use Intellij IDEA here
 * Maven
 * Spring Data JPA
 * H2 database
@@ -104,8 +104,71 @@ A lot of things are going on here! Let's explain them:
 
 Now that everything is set up, we can finally use our newly created repository!  
 Well, you must've guessed, we will code inside the run() function in our JpaTutorialApplication class.  
+First of all, we want to add some motorcycles to this repository. To do so, we will use the following code :
 
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/add_moto.png"/>
+</p>
 
+Then, we want to get all Yamaha motorcycles :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/get_yamaha.png"/>
+</p>
+
+Let's check the logger :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/logger.png"/>
+</p>
+
+Everything is fine, we manage to print our motorcycles!
+
+## Persistence ?
+
+Yeah, that's cool, but what about persistence ?  
+If I launch my Spring application, the repository gets 2 new motorcycles, but nothing is persistent here !  
+Right, we need to connect our application to a database then ! Let's use a simple MySQL database for this matter.  
+We won't go in details about how to set up MySQL here.  
+
+> From now on, every screenshot of the database will be taken from [DataGrip](https://www.jetbrains.com/datagrip/)
+
+Once everything is set up, simply create a new database called 'jpatutorial'. If everything went well, you should have something like that :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/db_empty.png"/>
+</p>
+
+Then, we have to tell our Spring application where this database is. To do so, we must edit the file 'src/resources/application.properties' :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/application_properties.png"/>
+</p>
+
+spring.jpa.hibernate.ddl-auto : multiple possibilities here :
+* none : No changes to the database structure (default)
+* update : Database structure changes following our entities
+* create : Create the database everytime but does not drop it
+* create-drop : Create the database everytime and drop it when our Spring application is shut down
+
+Now, launch your Spring application and let your code add new motorcycles to the repository.  
+When the application shuts down, look at your database :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/db_full_desc.png"/>
+</p>
+
+2 new tables have been created :
+* hibernate_sequence : This table is used internally by Hibernate to generate the next ID of your table
+* moto : Our Java class we annotated with @Entity is now a table in our database!
+
+Let's take a look inside this moto table :
+
+<p align="center">
+  <img src="https://github.com/rsauvair/JPA/blob/master/images/db_full_table.png"/>
+</p>
+
+And here we have the data we added in our code!
 
 # Credits
 Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)  
