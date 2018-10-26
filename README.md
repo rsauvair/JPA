@@ -43,7 +43,7 @@ First of all, here's a list of all the tools we will use in this tutorial :
 We will first create a new maven project with Spring Data JPA and Spring boot.  
 To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)  
 
-![alt text][spring_init]
+![spring_init]
 
 ## Entities
 
@@ -51,7 +51,7 @@ Once our project is set up, we're going to create our first entity.
 To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.  
 Then, have a look at this class :
 
-![class_moto]
+<center>![class_moto]</center>
 
 There is a lot of thing going on there! Let's have a look at them one by one:
 
