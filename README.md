@@ -44,4 +44,25 @@ First of all, here's a list of all the tools we will need to do this tutorial :
 We will first create a new maven project with Spring Data JPA and Spring boot.
 To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)
 
-![
+IMAGE SPRING INITIALIZR
+
+## Entities
+
+Once our project is set up, we're going to create our first entity.
+
+To do so, we're going to create a new package first, named 'entities', then a new Java class named 'Moto'.
+
+Then, have a look at this class :
+
+IMAGE CLASS MOTO.Java
+
+There is a lot of thing going on there! Let's have a look at them one by one:
+
+* @Entity : It's Spring Data JPA annotation to tell this class is an entity and need to persist.
+* @Id : Tells JPA that this attribute will be used as primary key in the Moto table.
+* @GeneratedValue : Indicate that the id should be generated automatically
+
+The other object's properties (brand, model, ...) are not annotated because we want them to be mapped to columns that share the same name.
+
+
+
