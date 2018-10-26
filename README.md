@@ -40,9 +40,9 @@ First of all, here's a list of all the tools we will need to do this tutorial :
 ## Setup
 
 We will first create a new maven project with Spring Data JPA and Spring boot.  
-To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)
+To do it, we will use [Spring Initializr](https://start.spring.io/) here. (which is embedded in Intellij IDEA Ultimate Edition)  
 
-IMAGE SPRING INITIALIZR
+![alt text][spring_init]
 
 ## Entities
 
@@ -68,3 +68,4 @@ We can also see that :
 Rubie DE OLIVEIRA (rubie.de-oliveira@epita.fr)  
 Romain SAUVAIRE--DASSAC (romain.sauvaire-dassac@epita.fr)
 
+[spring_init]: https://github.com/rsauvair/JPA/blob/master/images/spring_init.png "Spring Initializr"
